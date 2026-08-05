@@ -21,7 +21,7 @@ if (menuToggle && mobileMenu) {
 }
 
 /* ==========================================================================
-   STEALTH AI COPILOT SIMULATION (HERO SECTION)
+   QUANT-AI STRATEGY COPILOT SIMULATION (HERO SECTION)
    ========================================================================== */
 const audioTranscript = document.getElementById('audioTranscript');
 const codeSolver = document.getElementById('codeSolver');
@@ -164,7 +164,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   OPTION HEDGING SIMULATOR WIDGET (PROJECTS SECTION)
+   TICK-LEVEL OPTION HEDGING SIMULATOR WIDGET (PROJECTS SECTION)
    ========================================================================== */
 // State Variables
 let spotPrice = 24352.40;

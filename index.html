@@ -211,7 +211,7 @@
                 <div class="section-divider"></div>
             </div>
 
-            <!-- Big Project 1: Hedging Simulator with Live Browser Demo -->
+            <!-- Big Project 1: Tick-Level Option Hedging Simulator with Live Browser Demo -->
             <div class="project-showcase card">
                 <div class="showcase-content">
                     <div class="project-tags">
@@ -221,15 +221,15 @@
                         <span class="tag">Socket.IO</span>
                         <span class="tag">Quantitative Finance</span>
                     </div>
-                    <h3>Real-Time Option Hedging Simulator</h3>
+                    <h3>Tick-Level Option Hedging Simulator</h3>
                     <p>
-                        A full-stack options trading simulator built for high-performance tick-by-tick paper trading and backtesting. It streams options chain data chronologically, enabling users to execute trades, adjust strike positions, hedge portfolios, and track statistics in real time.
+                        A client-side options trading simulator built to backtest and execute hedging strategies using historical tick-by-tick (second-wise) bid/ask data. It streams historical option chain datasets chronologically, allowing users to execute paper trades, adjust strike positions, and simulate dynamic portfolio hedging.
                     </p>
                     <ul class="project-bullets">
-                        <li><i class="fa-solid fa-circle-check"></i> Supports chronological tick speeds down to 20ms.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Runs on historical second-wise tick data streams.</li>
                         <li><i class="fa-solid fa-circle-check"></i> Delta Breach Auto-Pause triggers automated pauses for portfolio re-hedging.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Live calculation of LTP, MTM PnL, Net Value, and portfolio Delta.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Interactive trade history drawers and session saving features.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Real-time calculation of LTP, MTM PnL, Net Value, and portfolio Delta.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Interactive trade history drawers and session logging.</li>
                     </ul>
                     <div class="project-actions" style="margin-top: 24px;">
                         <a href="https://github.com/AarishKhan014/Hedging-Simulator" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-brands fa-github"></i> View on GitHub</a>
@@ -245,7 +245,7 @@
                                 <span class="dot dot-yellow"></span>
                                 <span class="dot dot-green"></span>
                             </div>
-                            <div class="window-title">Options Chain Stream Simulator</div>
+                            <div class="window-title">Tick-Level Option Hedging Simulator</div>
                             <button class="sim-play-btn" id="toggleSimBtn"><i class="fa-solid fa-pause"></i> Pause</button>
                         </div>
                         <div class="window-body">
@@ -347,18 +347,20 @@
                         <div class="project-links">
                             <span class="project-tech-badge">Python</span>
                             <span class="project-tech-badge">LLMs & VLM</span>
-                            <a href="https://github.com/aarishk140400/Interview-Assistant" target="_blank" class="github-icon-link" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
                         </div>
                     </div>
-                    <h3>Quant-AI Research Assistant</h3>
+                    <h3>Quant-AI Strategy Copilot</h3>
                     <p>
-                        An intelligent desktop companion for quantitative researchers. It parses spoken or written strategy ideas, structures them mathematically, and calls the Gemini API to compile optimized, production-grade backtesting and execution scripts.
+                        A real-time desktop overlay assistant that captures voice inputs from your microphone and system audio (loopback), or accepts manual typing queries. It transcribes natural language concepts and uses LLMs to compile optimized, vectorized Python/PyTorch strategy code.
                     </p>
                     <ul class="card-features">
-                        <li><i class="fa-solid fa-check"></i> Natural Language to Quant-ML code translation</li>
-                        <li><i class="fa-solid fa-check"></i> Audio capture and real-time transcription logic</li>
-                        <li><i class="fa-solid fa-check"></i> Vision-Model screen analysis for chart processing</li>
+                        <li><i class="fa-solid fa-check"></i> Voice capturing & manual text inputs</li>
+                        <li><i class="fa-solid fa-check"></i> Vectorized code generation (NumPy/Pandas/PyTorch)</li>
+                        <li><i class="fa-solid fa-check"></i> VLM desktop screen chart and formula parser</li>
                     </ul>
+                    <div class="project-actions" style="margin-top: 16px;">
+                        <a href="https://github.com/AarishKhan014/Quant-AI-Research-Assistant" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-brands fa-github"></i> View on GitHub</a>
+                    </div>
                 </div>
 
                 <!-- Project 3 -->
@@ -368,7 +370,6 @@
                         <div class="project-links">
                             <span class="project-tech-badge">API Integration</span>
                             <span class="project-tech-badge">GitHub Actions</span>
-                            <a href="https://github.com/aarishk140400/ShoonyaOHLC" target="_blank" class="github-icon-link" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
                         </div>
                     </div>
                     <h3>ShoonyaOHLC AutoSync Pipeline</h3>
@@ -380,6 +381,9 @@
                         <li><i class="fa-solid fa-check"></i> Google Drive cloud upload integrations</li>
                         <li><i class="fa-solid fa-check"></i> Scalable CSV directory for backtests</li>
                     </ul>
+                    <div class="project-actions" style="margin-top: 16px;">
+                        <a href="https://github.com/AarishKhan014/ShoonyaOHLC" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-brands fa-github"></i> View on GitHub</a>
+                    </div>
                 </div>
 
                 <!-- Project 4 -->
@@ -389,7 +393,6 @@
                         <div class="project-links">
                             <span class="project-tech-badge">Neural Networks</span>
                             <span class="project-tech-badge">Streamlit</span>
-                            <a href="https://github.com/aarishk140400/Bank-Customer-Churn-Prediction" target="_blank" class="github-icon-link" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
                         </div>
                     </div>
                     <h3>Customer Churn Prediction (ANN)</h3>
@@ -401,6 +404,9 @@
                         <li><i class="fa-solid fa-check"></i> Preprocessing pipeline with categorical encoding</li>
                         <li><i class="fa-solid fa-check"></i> Real-time prediction web UI</li>
                     </ul>
+                    <div class="project-actions" style="margin-top: 16px;">
+                        <a href="https://github.com/AarishKhan014/Bank-Customer-Churn-Prediction" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-brands fa-github"></i> View on GitHub</a>
+                    </div>
                 </div>
 
                 <!-- Project 5 -->
@@ -410,7 +416,6 @@
                         <div class="project-links">
                             <span class="project-tech-badge">SQLite</span>
                             <span class="project-tech-badge">Backtesting</span>
-                            <a href="https://github.com/aarishk140400/Execution" target="_blank" class="github-icon-link" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
                         </div>
                     </div>
                     <h3>Live/Paper Strategy Execution Engine</h3>
@@ -422,6 +427,9 @@
                         <li><i class="fa-solid fa-check"></i> Paper & Live trade state comparisons</li>
                         <li><i class="fa-solid fa-check"></i> Modular order structure logging</li>
                     </ul>
+                    <div class="project-actions" style="margin-top: 16px;">
+                        <a href="https://github.com/AarishKhan014/Execution" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-brands fa-github"></i> View on GitHub</a>
+                    </div>
                 </div>
             </div>
         </div>
