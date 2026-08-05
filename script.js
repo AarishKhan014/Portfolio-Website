@@ -164,7 +164,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   OPTION EXPIRY SIMULATOR WIDGET (PROJECTS SECTION)
+   OPTION HEDGING SIMULATOR WIDGET (PROJECTS SECTION)
    ========================================================================== */
 // State Variables
 let spotPrice = 24352.40;

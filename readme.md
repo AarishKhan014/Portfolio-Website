@@ -13,7 +13,7 @@ The website is a highly optimized, responsive single-page application built usin
 *   **Prompt Panel**: Simulates natural language research prompts (e.g., requesting rolling Alpha/Beta or PyTorch LSTM architectures).
 *   **Solver Panel**: Simulates a Generative AI engine typing out optimized Python code blocks matching the researcher's query in real-time.
 
-### 2. Options Expiry Stream Simulator (Projects Showcase)
+### 2. Options Hedging Stream Simulator (Projects Showcase)
 *   A client-side options paper-trading simulator.
 *   **Live Price Engine**: Streams random-walk spot price fluctuations and updates strike LTPs (24300, 24350, 24400) dynamically.
 *   **Shorting & Long Logic**: Allows simulated Buy (`B`) and Sell (`S`) orders on Calls and Puts.

@@ -804,7 +804,7 @@ section {
     font-size: 0.9rem;
 }
 
-/* Option Expiry Simulator Widget CSS */
+/* Option Hedging Simulator Widget CSS */
 .option-sim-window {
     border-color: rgba(0, 242, 254, 0.2);
     box-shadow: 0 15px 30px rgba(0, 242, 254, 0.06);
@@ -1058,6 +1058,7 @@ section {
 
 .project-links {
     display: flex;
+    align-items: center;
     gap: 8px;
 }
 
@@ -1070,6 +1071,21 @@ section {
     padding: 3px 8px;
     border-radius: 3px;
     text-transform: uppercase;
+}
+
+.github-icon-link {
+    font-size: 1.2rem;
+    color: #64748b;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+    margin-left: 2px;
+}
+
+.github-icon-link:hover {
+    color: var(--accent-cyan);
+    transform: translateY(-1.5px);
 }
 
 .project-card h3 {
