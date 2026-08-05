@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarish Khan | Quant Researcher & AI Engineer</title>
+    <meta name="description" content="Portfolio of Aarish Khan - Junior Quantitative Researcher transitioning to Senior Quant ML & AI Engineering. Explore live interactive option simulator and AI tools.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Glowing Background Circles -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">AARISH<span class="highlight"> KHAN</span></a>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact" class="btn btn-sm">Contact</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="container hero-grid">
+            <div class="hero-text-block">
+                <div class="badge">Quantitative Researcher & AI Engineer</div>
+                <h1>Leveraging <span class="gradient-text">Mathematics</span> and <span class="gradient-text-alt">AI</span> to Trade & Build</h1>
+                <p class="hero-description">
+                    I design, backtest, and automate systematic trading strategies. As a Quantitative Researcher, I work at the intersection of quantitative finance, machine learning, and data-driven research, with a growing focus on Generative AI and LLM Engineering for building production-grade intelligent systems.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">Explore Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            
+            <!-- Hero Widget: Quant-AI Strategy Copilot Live Mockup -->
+            <div class="hero-widget-block">
+                <div class="window-mockup ai-copilot-window">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                        </div>
+                        <div class="window-title">Quant-AI Strategy Copilot (LLM Engine Active)</div>
+                        <div class="window-status"><span class="status-indicator-dot pulsing"></span> Online</div>
+                    </div>
+                    <div class="window-body">
+                        <div class="copilot-grid">
+                            <div class="copilot-panel pane-audio">
+                                <div class="pane-title"><i class="fa-solid fa-lightbulb"></i> Researcher Strategy Prompt (Natural Language)</div>
+                                <div class="audio-log" id="audioTranscript">
+                                    <div class="log-line system-msg">[System] Quant-AI Engine initialized. Ready to process strategy inputs...</div>
+                                </div>
+                            </div>
+                            <div class="copilot-panel pane-solver">
+                                <div class="pane-title"><i class="fa-solid fa-code"></i> AI Generated Strategy Code (Python/PyTorch)</div>
+                                <pre class="code-output"><code id="codeSolver"># Waiting for research prompts...</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-grid">
+                <!-- Left Column: Profile Card + Stats -->
+                <div class="about-left-col">
+                    <div class="about-profile-card card">
+                        <div class="profile-img-container">
+                            <img src="profile.jpg" alt="Aarish Khan">
+                        </div>
+                        <h3 class="profile-name">Aarish Khan</h3>
+                        <p class="profile-title">Jr. Quantitative Researcher</p>
+                        <p class="profile-company"><i class="fa-solid fa-building"></i> Pace Stock Broking Services Pvt. Ltd.</p>
+                    </div>
+                    
+                    <div class="about-stats-grid">
+                        <div class="stat-card card">
+                            <div class="stat-icon"><i class="fa-solid fa-chart-line"></i></div>
+                            <div class="stat-num">3+ Years</div>
+                            <div class="stat-label">Trading & Quant Experience</div>
+                        </div>
+                        <div class="stat-card card">
+                            <div class="stat-icon"><i class="fa-solid fa-code"></i></div>
+                            <div class="stat-num">1,000+</div>
+                            <div class="stat-label">Strategies Backtested</div>
+                        </div>
+                        <div class="stat-card card">
+                            <div class="stat-icon"><i class="fa-solid fa-terminal"></i></div>
+                            <div class="stat-num">100%</div>
+                            <div class="stat-label">Automated Pipelines</div>
+                        </div>
+                        <div class="stat-card card">
+                            <div class="stat-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="stat-num">MCA</div>
+                            <div class="stat-label">SMU (Pursuing)</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column: My Journey -->
+                <div class="about-info-block card">
+                    <h3>My Journey</h3>
+                    <p>
+                        I work as a <strong>Junior Quantitative Researcher</strong> at <em>Pace Stock Broking Services</em>, where I spend my days building backtesting pipelines, validating alpha strategies, and engineering data flows. My professional background began in the trading pits as an <strong>Equity & Derivatives Trader</strong>, giving me first-hand experience with execution systems, derivatives math, and market microstructure.
+                    </p>
+                    <p>
+                        With a formal background spanning <strong>Economics (B.A.)</strong>, <strong>Law (LL.B.)</strong>, and an ongoing <strong>Master of Computer Applications (MCA)</strong>, I occupy a unique sweet spot at the intersection of business logic, computational engineering, and strategic modeling.
+                    </p>
+                    <p>
+                        I am currently expanding my skill set to build scalable AI systems, specializing in Generative AI architectures, vector databases, and MLOps pipelines.
+                    </p>
+                    <div class="cv-action">
+                        <a href="CV 2026.pdf" download="Aarish_Khan_Resume.pdf" class="btn btn-primary"><i class="fa-solid fa-file-arrow-down"></i> Download Resume (CV)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technical Toolkit</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Skill Category 1 -->
+                <div class="skills-category-card card">
+                    <div class="category-icon"><i class="fa-solid fa-square-root-variable"></i></div>
+                    <h3>Quantitative Finance</h3>
+                    <ul class="skills-list">
+                        <li><span>Backtesting & Strategy Dev</span></li>
+                        <li><span>Time Series & Risk Analysis</span></li>
+                        <li><span>Derivatives & Options Math</span></li>
+                        <li><span>OHLCV Data Engineering</span></li>
+                        <li><span>Execution Architecture</span></li>
+                    </ul>
+                </div>
+                <!-- Skill Category 2 -->
+                <div class="skills-category-card card">
+                    <div class="category-icon"><i class="fa-solid fa-robot"></i></div>
+                    <h3>Artificial Intelligence & ML</h3>
+                    <ul class="skills-list">
+                        <li><span>Neural Networks (ANN/CNN)</span></li>
+                        <li><span>Supervised & Unsupervised ML</span></li>
+                        <li><span>Large Language Models (LLMs)</span></li>
+                        <li><span>PyTorch, TensorFlow, Scikit-learn</span></li>
+                        <li><span>Streamlit AI Application Dev</span></li>
+                    </ul>
+                </div>
+                <!-- Skill Category 3 -->
+                <div class="skills-category-card card">
+                    <div class="category-icon"><i class="fa-solid fa-database"></i></div>
+                    <h3>Data & Software Engineering</h3>
+                    <ul class="skills-list">
+                        <li><span>Advanced Python & SQL</span></li>
+                        <li><span>Pandas, NumPy, Matplotlib</span></li>
+                        <li><span>GitHub Actions & CI/CD Cron Jobs</span></li>
+                        <li><span>SQLite & Relational Databases</span></li>
+                        <li><span>RESTful API Integration</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Big Project 1: Expiry Simulator with Live Browser Demo -->
+            <div class="project-showcase card">
+                <div class="showcase-content">
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Vite</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Socket.IO</span>
+                        <span class="tag">Quantitative Finance</span>
+                    </div>
+                    <h3>Real-Time Option Expiry Simulator</h3>
+                    <p>
+                        A full-stack options trading simulator built for high-performance tick-by-tick paper trading and backtesting. It streams options chain data chronologically, enabling users to execute trades, adjust strike positions, hedge portfolios, and track statistics in real time.
+                    </p>
+                    <ul class="project-bullets">
+                        <li><i class="fa-solid fa-circle-check"></i> Supports chronological tick speeds down to 20ms.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Delta Breach Auto-Pause triggers automated pauses for portfolio re-hedging.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Live calculation of LTP, MTM PnL, Net Value, and portfolio Delta.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Interactive trade history drawers and session saving features.</li>
+                    </ul>
+                </div>
+                
+                <!-- Interactive Options Simulator Widget -->
+                <div class="showcase-widget">
+                    <div class="window-mockup option-sim-window">
+                        <div class="window-header">
+                            <div class="window-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <div class="window-title">Options Chain Stream Simulator</div>
+                            <button class="sim-play-btn" id="toggleSimBtn"><i class="fa-solid fa-pause"></i> Pause</button>
+                        </div>
+                        <div class="window-body">
+                            <div class="sim-metrics">
+                                <div class="metric">
+                                    <span class="label">NIFTY Spot</span>
+                                    <span class="value cyan" id="simSpotPrice">24,352.40</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="label">Net PnL</span>
+                                    <span class="value" id="simPnL">₹0.00</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="label">Portfolio Delta</span>
+                                    <span class="value" id="simDelta">0.00</span>
+                                </div>
+                            </div>
+                            
+                            <table class="sim-table">
+                                <thead>
+                                    <tr>
+                                        <th>Call LTP</th>
+                                        <th>Strike</th>
+                                        <th>Put LTP</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="strike-row">
+                                        <td class="action-cell">
+                                            <span class="price-val" id="ltpCE1">142.30</span>
+                                            <div class="action-btns">
+                                                <button class="trade-btn buy" onclick="executeSimTrade('CE', 24300, 142.30, 'buy')">B</button>
+                                                <button class="trade-btn sell" onclick="executeSimTrade('CE', 24300, 142.30, 'sell')">S</button>
+                                            </div>
+                                        </td>
+                                        <td class="strike-val">24300</td>
+                                        <td class="action-cell">
+                                            <span class="price-val" id="ltpPE1">45.10</span>
+                                            <div class="action-btns">
+                                                <button class="trade-btn buy" onclick="executeSimTrade('PE', 24300, 45.10, 'buy')">B</button>
+                                                <button class="trade-btn sell" onclick="executeSimTrade('PE', 24300, 45.10, 'sell')">S</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="strike-row active-strike">
+                                        <td class="action-cell">
+                                            <span class="price-val" id="ltpCE2">108.50</span>
+                                            <div class="action-btns">
+                                                <button class="trade-btn buy" onclick="executeSimTrade('CE', 24350, 108.50, 'buy')">B</button>
+                                                <button class="trade-btn sell" onclick="executeSimTrade('CE', 24350, 108.50, 'sell')">S</button>
+                                            </div>
+                                        </td>
+                                        <td class="strike-val">24350</td>
+                                        <td class="action-cell">
+                                            <span class="price-val" id="ltpPE2">61.20</span>
+                                            <div class="action-btns">
+                                                <button class="trade-btn buy" onclick="executeSimTrade('PE', 24350, 61.20, 'buy')">B</button>
+                                                <button class="trade-btn sell" onclick="executeSimTrade('PE', 24350, 61.20, 'sell')">S</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="strike-row">
+                                        <td class="action-cell">
+                                            <span class="price-val" id="ltpCE3">79.20</span>
+                                            <div class="action-btns">
+                                                <button class="trade-btn buy" onclick="executeSimTrade('CE', 24400, 79.20, 'buy')">B</button>
+                                                <button class="trade-btn sell" onclick="executeSimTrade('CE', 24400, 79.20, 'sell')">S</button>
+                                            </div>
+                                        </td>
+                                        <td class="strike-val">24400</td>
+                                        <td class="action-cell">
+                                            <span class="price-val" id="ltpPE3">83.70</span>
+                                            <div class="action-btns">
+                                                <button class="trade-btn buy" onclick="executeSimTrade('PE', 24400, 83.70, 'buy')">B</button>
+                                                <button class="trade-btn sell" onclick="executeSimTrade('PE', 24400, 83.70, 'sell')">S</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <div class="sim-positions">
+                                <div class="pos-header">Active Positions (<span id="posCount">0</span>) <button class="clear-btn" id="clearPositionsBtn">Clear</button></div>
+                                <div class="pos-list" id="positionsList">
+                                    <div class="empty-pos-msg">No active options positions. Click "B" (Buy) or "S" (Sell) on any strike price to open a position.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Projects Grid -->
+            <div class="projects-grid">
+                <!-- Project 2 -->
+                <!-- Project 2 -->
+                <div class="project-card card">
+                    <div class="project-header">
+                        <div class="project-folder"><i class="fa-regular fa-folder-open"></i></div>
+                        <div class="project-links">
+                            <span class="project-tech-badge">Python</span>
+                            <span class="project-tech-badge">LLMs & VLM</span>
+                        </div>
+                    </div>
+                    <h3>Quant-AI Research Assistant</h3>
+                    <p>
+                        An intelligent desktop companion for quantitative researchers. It parses spoken or written strategy ideas, structures them mathematically, and calls the Gemini API to compile optimized, production-grade backtesting and execution scripts.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class="fa-solid fa-check"></i> Natural Language to Quant-ML code translation</li>
+                        <li><i class="fa-solid fa-check"></i> Audio capture and real-time transcription logic</li>
+                        <li><i class="fa-solid fa-check"></i> Vision-Model screen analysis for chart processing</li>
+                    </ul>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card card">
+                    <div class="project-header">
+                        <div class="project-folder"><i class="fa-regular fa-folder-open"></i></div>
+                        <div class="project-links">
+                            <span class="project-tech-badge">API Integration</span>
+                            <span class="project-tech-badge">GitHub Actions</span>
+                        </div>
+                    </div>
+                    <h3>ShoonyaOHLC AutoSync Pipeline</h3>
+                    <p>
+                        An automated data engineering pipeline that auto-fetches daily post-market Nifty Spot, Futures, and Options OHLC values from the Shoonya API, structures it, and uploads the dataset to cloud-based storage.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class="fa-solid fa-check"></i> Run via GitHub Actions cron jobs</li>
+                        <li><i class="fa-solid fa-check"></i> Google Drive cloud upload integrations</li>
+                        <li><i class="fa-solid fa-check"></i> Scalable CSV directory for backtests</li>
+                    </ul>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card card">
+                    <div class="project-header">
+                        <div class="project-folder"><i class="fa-regular fa-folder-open"></i></div>
+                        <div class="project-links">
+                            <span class="project-tech-badge">Neural Networks</span>
+                            <span class="project-tech-badge">Streamlit</span>
+                        </div>
+                    </div>
+                    <h3>Customer Churn Prediction (ANN)</h3>
+                    <p>
+                        An Artificial Neural Network (ANN) model built in TensorFlow and deployed as a Streamlit web application. Predicts whether retail bank customers are likely to exit the bank based on demographics and financial metrics.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class="fa-solid fa-check"></i> Multi-layer ANN with hyperparameter tuning</li>
+                        <li><i class="fa-solid fa-check"></i> Preprocessing pipeline with categorical encoding</li>
+                        <li><i class="fa-solid fa-check"></i> Real-time prediction web UI</li>
+                    </ul>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card card">
+                    <div class="project-header">
+                        <div class="project-folder"><i class="fa-regular fa-folder-open"></i></div>
+                        <div class="project-links">
+                            <span class="project-tech-badge">SQLite</span>
+                            <span class="project-tech-badge">Backtesting</span>
+                        </div>
+                    </div>
+                    <h3>Live/Paper Strategy Execution Engine</h3>
+                    <p>
+                        A systematic execution engine tracking strategy status in real time. It uses SQLite databases to save local trading states, active variants, order executions, and trade logging for low-frequency algorithmic strategies.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class="fa-solid fa-check"></i> Relational database logging schemas</li>
+                        <li><i class="fa-solid fa-check"></i> Paper & Live trade state comparisons</li>
+                        <li><i class="fa-solid fa-check"></i> Modular order structure logging</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Let's Collaborate</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info card">
+                    <h3>Get in Touch</h3>
+                    <p>
+                        I am open to opportunities in Quantitative Research, Machine Learning Engineering, and Generative AI roles. If you want to talk systematic trading strategies, LLM agents, or check out my code, feel free to reach out.
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-item">
+                            <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                            <div class="details">
+                                <span class="label">Email</span>
+                                <a href="mailto:aarishk140400@gmail.com" class="link">aarishk140400@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                            <div class="details">
+                                <span class="label">Phone</span>
+                                <a href="tel:+919984738263" class="link">+91 9984738263</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <div class="details">
+                                <span class="label">Location</span>
+                                <span class="text">New Delhi, India</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/aarishkhan" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com/in/aarishkhan" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-block card">
+                    <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                        <div class="form-group">
+                            <label for="formName">Name</label>
+                            <input type="text" id="formName" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="formEmail">Email</label>
+                            <input type="email" id="formEmail" required placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="formMessage">Message</label>
+                            <textarea id="formMessage" rows="5" required placeholder="Hi Aarish, I'd love to discuss..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                    <div class="form-success-message" id="formSuccessMsg">
+                        <i class="fa-solid fa-circle-check"></i> Message sent successfully! I'll get back to you soon.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Aarish Khan. All rights reserved.</p>
+            <p class="footer-subtext">Quant Research & AI Portfolio. Custom domain: <a href="http://aarishkhan.in" target="_blank">aarishkhan.in</a></p>
+        </div>
+    </footer>
+
+    <!-- JS script -->
+    <script src="script.js"></script>
+</body>
+</html>
