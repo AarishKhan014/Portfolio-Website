@@ -63,27 +63,44 @@
             <!-- Hero Widget: Quant-AI Strategy Copilot Live Mockup -->
             <div class="hero-widget-block">
                 <div class="window-mockup ai-copilot-window">
-                    <div class="window-header">
-                        <div class="window-dots">
-                            <span class="dot dot-red"></span>
-                            <span class="dot dot-yellow"></span>
-                            <span class="dot dot-green"></span>
+                    <!-- Custom Title Bar (Win32 Overlay Style) -->
+                    <div class="copilot-titlebar">
+                        <div class="copilot-title-left">
+                            <span class="status-light-indicator">●</span>
+                            <span class="copilot-window-title">Quant-AI Strategy Copilot (LLM Engine Active)</span>
                         </div>
-                        <div class="window-title">Quant-AI Strategy Copilot (LLM Engine Active)</div>
-                        <div class="window-status"><span class="status-indicator-dot pulsing"></span> Online</div>
+                        <div class="copilot-title-right">
+                            <span class="status-mode-label">[🎙️ Active]</span>
+                            <span class="header-btn">📸 Parse Screen</span>
+                            <span class="header-btn">❓ Help</span>
+                            <span class="close-btn-mock">✕</span>
+                        </div>
                     </div>
-                    <div class="window-body">
-                        <div class="copilot-grid">
-                            <div class="copilot-panel pane-audio">
-                                <div class="pane-title"><i class="fa-solid fa-lightbulb"></i> Researcher Strategy Prompt (Natural Language)</div>
-                                <div class="audio-log" id="audioTranscript">
-                                    <div class="log-line system-msg">[System] Quant-AI Engine initialized. Ready to process strategy inputs...</div>
-                                </div>
-                            </div>
-                            <div class="copilot-panel pane-solver">
-                                <div class="pane-title"><i class="fa-solid fa-code"></i> AI Generated Strategy Code (Python/PyTorch)</div>
-                                <pre class="code-output"><code id="codeSolver"># Waiting for research prompts...</code></pre>
-                            </div>
+                    
+                    <!-- Separator Line -->
+                    <div class="copilot-separator"></div>
+                    
+                    <!-- Custom Body Panel -->
+                    <div class="copilot-body">
+                        <!-- Researcher Prompt Display -->
+                        <div class="researcher-prompt-box">
+                            <span class="prompt-speaker-label">Researcher:</span>
+                            <span class="prompt-text-content" id="audioTranscript">Listening for strategy inputs...</span>
+                        </div>
+                        
+                        <!-- Manual Entry Input Mockup -->
+                        <div class="query-entry-mock">
+                            <span class="entry-placeholder" id="mockQueryEntry">Type a strategy prompt and press Enter...</span>
+                        </div>
+                        
+                        <!-- Output Subheading -->
+                        <div class="copilot-output-heading">AI STRATEGY CODE & MATHEMATICAL MODEL</div>
+                        
+                        <!-- Suggestion Display Box -->
+                        <div class="copilot-suggestion-box">
+                            <pre class="code-output"><code id="codeSolver"># Waiting for research prompts...</code></pre>
+                            <!-- Resize grip indicator -->
+                            <div class="resize-grip-mock">◢</div>
                         </div>
                     </div>
                 </div>
@@ -351,15 +368,15 @@
                     </div>
                     <h3>Quant-AI Strategy Copilot</h3>
                     <p>
-                        A real-time desktop overlay assistant that captures voice inputs from your microphone and system audio (loopback), or accepts manual typing queries. It transcribes natural language concepts and uses LLMs to compile optimized, vectorized Python/PyTorch strategy code.
+                        A topmost, semi-transparent desktop overlay assistant. It allows users to ask quantitative trading questions via microphone/speaker audio capture, manual text typing, or by grabbing screen captures of charts and formulas directly from research PDFs or terminals.
                     </p>
                     <ul class="card-features">
-                        <li><i class="fa-solid fa-check"></i> Voice capturing & manual text inputs</li>
-                        <li><i class="fa-solid fa-check"></i> Vectorized code generation (NumPy/Pandas/PyTorch)</li>
-                        <li><i class="fa-solid fa-check"></i> VLM desktop screen chart and formula parser</li>
+                        <li><i class="fa-solid fa-check"></i> Low-Latency Signal Pipeline</li>
+                        <li><i class="fa-solid fa-check"></i> Windows screen capture OCR (DeepSeek/Groq)</li>
+                        <li><i class="fa-solid fa-check"></i> Multi-threaded Python engine with Win32 hooks</li>
                     </ul>
                     <div class="project-actions" style="margin-top: 16px;">
-                        <a href="https://github.com/AarishKhan014/Quant-AI-Research-Assistant" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-brands fa-github"></i> View on GitHub</a>
+                        <a href="https://github.com/AarishKhan014/Quant-AI-Strategy-Copilot" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-brands fa-github"></i> View on GitHub</a>
                     </div>
                 </div>
 

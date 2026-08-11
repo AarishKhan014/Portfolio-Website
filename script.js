@@ -25,14 +25,12 @@ if (menuToggle && mobileMenu) {
    ========================================================================== */
 const audioTranscript = document.getElementById('audioTranscript');
 const codeSolver = document.getElementById('codeSolver');
+const mockQueryEntry = document.getElementById('mockQueryEntry');
 
 const copilotScenarios = [
     {
-        transcript: [
-            { sender: "System", text: "[System] Processing research input..." },
-            { sender: "Researcher", text: "Compute the rolling Alpha and Beta of our strategy daily returns." },
-            { sender: "Researcher", text: "Use a rolling window of 60 trading days against the benchmark index returns." }
-        ],
+        mode: "voice",
+        transcript: "Compute the rolling 60-day Alpha and Beta of our strategy daily returns against Nifty.",
         code: `import numpy as np
 import pandas as pd
 
@@ -49,33 +47,28 @@ def rolling_alpha_beta(strat_returns, benchmark_returns, window=60):
     
     return alpha, beta
 
-# Metrics calculated successfully for 60-day rolling window.
-# Returns: Alpha (Series), Beta (Series)`
+# Metrics calculated successfully for 60-day rolling window.`
     },
     {
-        transcript: [
-            { sender: "System", text: "[System] Loading PyTorch neural net templates..." },
-            { sender: "Researcher", text: "Build an LSTM model in PyTorch to forecast short-term volatility." },
-            { sender: "Researcher", text: "Input is a sequence of 50 order book imbalance ratios (bid/ask volume)." }
-        ],
+        mode: "type",
+        transcript: "Build a PyTorch LSTM model to predict volatility from order book imbalance sequence.",
         code: `import torch
 import torch.nn as nn
 
 class VolatilityLSTM(nn.Module):
     def __init__(self, input_dim=1, hidden_dim=32, num_layers=2):
         super(VolatilityLSTM, self).__init__()
-        # LSTM layer to capture sequential order book dynamics
         self.lstm = nn.LSTM(input_dim, hidden_dim, num_layers, batch_first=True)
         self.fc = nn.Linear(hidden_dim, 1)
         
     def forward(self, x):
         # x shape: (batch_size, seq_len=50, input_dim=1)
         lstm_out, _ = self.lstm(x)
-        last_step = lstm_out[:, -1, :] # state at last timestep
+        last_step = lstm_out[:, -1, :]
         out = self.fc(last_step)
         return torch.abs(out) # Volatility must be positive
 
-# Model structure initialized successfully. Ready for optimization loop...`
+# Model structure initialized successfully.`
     }
 ];
 
@@ -83,82 +76,85 @@ let currentScenarioIndex = 0;
 let typingTimeout = null;
 
 function runCopilotSimulation() {
-    if (!audioTranscript || !codeSolver) return;
+    if (!audioTranscript || !codeSolver || !mockQueryEntry) return;
     
     const scenario = copilotScenarios[currentScenarioIndex];
-    audioTranscript.innerHTML = '';
-    codeSolver.textContent = '';
+    audioTranscript.textContent = 'Listening for strategy inputs...';
+    audioTranscript.style.color = '#8A7B9B';
+    mockQueryEntry.textContent = 'Type a strategy prompt and press Enter...';
+    mockQueryEntry.style.color = '#8A7B9B';
+    codeSolver.textContent = '# Waiting for research prompts...';
     
-    let transcriptIndex = 0;
+    typingTimeout = setTimeout(startPromptInput, 1500);
     
-    function typeTranscript() {
-        if (transcriptIndex < scenario.transcript.length) {
-            const line = scenario.transcript[transcriptIndex];
-            const lineDiv = document.createElement('div');
+    function startPromptInput() {
+        if (scenario.mode === "voice") {
+            audioTranscript.textContent = '';
+            audioTranscript.style.color = '#C8C2D6';
+            let charIndex = 0;
             
-            if (line.sender === "System") {
-                lineDiv.className = 'log-line system-msg';
-                lineDiv.textContent = line.text;
-            } else {
-                lineDiv.className = 'log-line speaker';
-                lineDiv.innerHTML = `<strong>${line.sender}:</strong> `;
-                audioTranscript.appendChild(lineDiv);
-                
-                // Type transcript text character by character
-                let charIndex = 0;
-                function typeChar() {
-                    if (charIndex < line.text.length) {
-                        lineDiv.innerHTML += line.text.charAt(charIndex);
-                        charIndex++;
-                        typingTimeout = setTimeout(typeChar, 30);
-                    } else {
-                        audioTranscript.scrollTop = audioTranscript.scrollHeight;
-                        transcriptIndex++;
-                        typingTimeout = setTimeout(typeTranscript, 1000);
-                    }
+            function typeVoice() {
+                if (charIndex < scenario.transcript.length) {
+                    audioTranscript.textContent += scenario.transcript.charAt(charIndex);
+                    charIndex++;
+                    typingTimeout = setTimeout(typeVoice, 30);
+                } else {
+                    typingTimeout = setTimeout(typeCode, 800);
                 }
-                typeChar();
-                return;
             }
-            
-            audioTranscript.appendChild(lineDiv);
-            audioTranscript.scrollTop = audioTranscript.scrollHeight;
-            transcriptIndex++;
-            typingTimeout = setTimeout(typeTranscript, 1200);
+            typeVoice();
         } else {
-            // Transcript finished, start typing code solver output
-            typingTimeout = setTimeout(typeCode, 500);
+            mockQueryEntry.textContent = '';
+            mockQueryEntry.style.color = '#FFFFFF';
+            let charIndex = 0;
+            
+            function typeEntry() {
+                if (charIndex < scenario.transcript.length) {
+                    mockQueryEntry.textContent += scenario.transcript.charAt(charIndex);
+                    charIndex++;
+                    typingTimeout = setTimeout(typeEntry, 30);
+                } else {
+                    typingTimeout = setTimeout(() => {
+                        mockQueryEntry.textContent = 'Type a strategy prompt and press Enter...';
+                        mockQueryEntry.style.color = '#8A7B9B';
+                        
+                        audioTranscript.textContent = scenario.transcript;
+                        audioTranscript.style.color = '#C8C2D6';
+                        
+                        typingTimeout = setTimeout(typeCode, 800);
+                    }, 500);
+                }
+            }
+            typeEntry();
         }
     }
     
     function typeCode() {
+        codeSolver.textContent = '';
         let codeCharIndex = 0;
         const codeText = scenario.code;
         
         function typeCodeChar() {
-            // Speed up typing by outputting 2-3 characters at a time for longer code
             if (codeCharIndex < codeText.length) {
                 const chunk = codeText.substr(codeCharIndex, 3);
                 codeSolver.textContent += chunk;
                 codeCharIndex += chunk.length;
                 
-                // Adjust styling
-                audioTranscript.scrollTop = audioTranscript.scrollHeight;
+                const preParent = codeSolver.parentElement;
+                if (preParent) {
+                    preParent.scrollTop = preParent.scrollHeight;
+                }
                 
                 typingTimeout = setTimeout(typeCodeChar, 15);
             } else {
-                // Done writing. Wait 6 seconds and load next scenario
                 currentScenarioIndex = (currentScenarioIndex + 1) % copilotScenarios.length;
-                typingTimeout = setTimeout(runCopilotSimulation, 6000);
+                typingTimeout = setTimeout(runCopilotSimulation, 8000);
             }
         }
         typeCodeChar();
     }
-    
-    typeTranscript();
 }
 
-// Start simulation on load
 window.addEventListener('DOMContentLoaded', () => {
     runCopilotSimulation();
 });

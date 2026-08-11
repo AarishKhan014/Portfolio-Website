@@ -360,6 +360,15 @@ header {
     gap: 16px;
 }
 
+/* Hero Widget 3D Perspective Wrapper */
+.hero-widget-block {
+    perspective: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 /* Mockup Windows Styling */
 .window-mockup {
     background: #0b0f19;
@@ -432,72 +441,219 @@ header {
     100% { opacity: 0.3; }
 }
 
-/* AI Copilot Widget Structure */
-.copilot-grid {
-    display: grid;
-    grid-template-rows: 140px 240px;
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
+/* Real Quant-AI Strategy Copilot GUI Mockup Styles */
+.ai-copilot-window {
+    background-color: #0b0f19 !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5) !important;
+    overflow: hidden;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    font-family: "Segoe UI", sans-serif;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
-.copilot-panel {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+.ai-copilot-window:hover {
+    transform: translateY(-6px);
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.65), 
+        0 0 25px rgba(0, 242, 254, 0.12) !important;
+    border-color: rgba(0, 242, 254, 0.25) !important;
+}
+
+.copilot-titlebar {
+    background-color: #111827;
+    height: 35px;
+    padding: 0 12px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
 }
 
-.copilot-panel:last-child {
-    border-bottom: none;
-}
-
-.pane-title {
-    background: #0f172a;
-    padding: 6px 12px;
-    color: #94a3b8;
-    font-size: 0.72rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+.copilot-title-left {
     display: flex;
     align-items: center;
     gap: 6px;
 }
 
-.audio-log {
-    padding: 12px;
-    overflow-y: auto;
-    flex-grow: 1;
-    color: #cbd5e1;
+.status-light-indicator {
+    color: var(--accent-green);
+    font-size: 1.1rem;
+}
+
+.copilot-window-title {
+    color: #64748b;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.copilot-title-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.status-mode-label {
+    color: var(--accent-green);
+    font-size: 0.7rem;
+    font-style: italic;
+    margin-right: 4px;
+}
+
+.header-btn {
+    color: #64748b;
+    font-size: 0.72rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.header-btn:hover {
+    color: #FFFFFF;
+}
+
+.close-btn-mock {
+    color: #64748b;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    padding: 2px 4px;
+}
+
+.close-btn-mock:hover {
+    color: var(--accent-red);
+}
+
+.copilot-separator {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.copilot-body {
+    background-color: rgba(13, 19, 33, 0.45);
+    padding: 12px 14px;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    position: relative;
+    text-align: left;
 }
 
-.log-line {
+.researcher-prompt-box {
+    display: flex;
+    gap: 6px;
+    font-size: 0.82rem;
     line-height: 1.4;
-    word-break: break-word;
+    min-height: 38px;
 }
 
-.log-line.system-msg {
+.prompt-speaker-label {
     color: #64748b;
+    font-weight: 700;
+    flex-shrink: 0;
 }
 
-.log-line.speaker {
+.prompt-text-content {
+    color: #cbd5e1;
+    font-style: italic;
+}
+
+.query-entry-mock {
+    background-color: #080c14;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 6px 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.entry-placeholder {
+    color: #475569;
+    font-size: 0.82rem;
+    font-style: italic;
+}
+
+.copilot-output-heading {
     color: var(--accent-cyan);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
 }
 
-.code-output {
-    padding: 12px;
+.copilot-suggestion-box {
+    background-color: #080c14;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+    padding: 10px;
+    height: 200px;
     overflow-y: auto;
-    flex-grow: 1;
-    background: #080c14;
-    color: #38bdf8;
-    margin: 0;
+    position: relative;
 }
 
-.code-output code {
+/* Sci-Fi Scanning Laser Line effect */
+.copilot-suggestion-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--accent-cyan), transparent);
+    box-shadow: 0 0 8px var(--accent-cyan), 0 0 15px var(--accent-cyan);
+    opacity: 0.5;
+    pointer-events: none;
+    animation: laser-scan 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes laser-scan {
+    0% {
+        top: 0%;
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.5;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        top: 98%;
+        opacity: 0;
+    }
+}
+
+.copilot-suggestion-box pre.code-output {
+    background: transparent !important;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.copilot-suggestion-box pre.code-output code {
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 0.8rem;
+    color: var(--accent-teal);
+    line-height: 1.45;
     white-space: pre-wrap;
     word-break: break-all;
     display: block;
-    line-height: 1.4;
+}
+
+.resize-grip-mock {
+    position: absolute;
+    right: 3px;
+    bottom: -1px;
+    color: #334155;
+    font-size: 0.82rem;
+    user-select: none;
+}
 }
 
 /* ==========================================================================
