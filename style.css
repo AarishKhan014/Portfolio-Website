@@ -465,8 +465,8 @@ header {
 
 .copilot-titlebar {
     background-color: #111827;
-    height: 35px;
-    padding: 0 12px;
+    height: 46px;
+    padding: 0 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -476,7 +476,7 @@ header {
 .copilot-title-left {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
 }
 
 .status-light-indicator {
@@ -493,7 +493,7 @@ header {
 .copilot-title-right {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
 }
 
 .status-mode-label {
